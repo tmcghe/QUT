@@ -72,6 +72,31 @@ Class weights, becomes less accurate on popular classes, but depends what you wa
 \
 Random forest, training lots and lots of little decision trees.\
 Hyperparams, number of trees and how big those trees get.\
+Gridsearch is bad, because it takes around 30-40 instances, the process that they want is that we follow some sort of grid search.\
+\
+\
+\
+\
+\
+##################\
+Practical\
+##################\
+\
+Cknn regarding the class imbalance and setting n, ok for setting n, I believe that you can set a higher n than the lowest class sample size with the exception that the weight hyper parameter is changed to due some regularisation which could help with large amounts of categoricals.\
+\
+How to present the answers for the assignment for full marks\
+\
+SVM, KNN and RF\
+Need two details for each of these 3,\
+1. Hyperparameters\
+2. Ranges of hyperparameter that have been selected\
+Then -> give the best combination of hyperparameters\
+Table this will give part marks, full marks will be discussion of results. \
+Changing random seeds for splitting the sets, this helps with validity, k validity helps with looking\
+\
+RF random seeds, if you double the set size, then essentially the insertion points are random and therefore creates another random training set.\
+In theory this is the same as randomizing with a different seed just in a larger set size, but practically computation can get unfeasible.\
+In the assignment, explain the \'93wrapper\'94 used for sim. I.e SVM WITH 1v1 or 1vMany\
 \
 \
 \
