@@ -1,0 +1,80 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww28600\viewh14460\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 When splitting data with the training .split, make sure to use the same random state when trying to debug the machine learning model, as it makes it deterministic so you aren\'92t dealing with one less dependent variable debugging an ML model.\
+\
+Problem with classification models is that the worldview of the machine learning models is generally myopic in scope, so for example if someone takes a machine learning model for self driving cars that\'92s been trained inside of city, if it goes to the outback and sees a kangaroo it won\'92t know what to do at all. (Topics I think that can solve this, double descent, grokking?)\
+\
+\
+Confusion matrix when looking at the vector embedding on the rare classes, would normalising the count be better or not, if so why/why not? As there is a disproportionate amount of American IPAs instead of the other beers.\
+Would taking out American spa and American pale ale and trainining as a subset be a good idea for precision?\
+\
+K nearest neighbours most important hyper parameters\
+ Neighbours, then metric then weight.\
+\
+\
+Ken and overfitting, when setting the weights to distance which proportionately looks at the closer distances and weighs it more, and having 200 neighbours one of the neighbours is the exact point is essentially 0, so that point (look into this more). \
+\
+Cosine is good when the classes and the angle vectors are normalized, i.e if class imbalance is high it will just \'93angle\'94 towards those if that makes sense.\
+\
+Distance weighting is always better, is there any use of using different weights for the hyperparameters. \
+\
+Svm mechanics and figuring out the hyperplane.\
+\
+Svmm, you need to find the distance between the hyperplane (which is w) you need to apply th unit vector which is w divided by its magnitude.\
+\
+Maximising the margin, solved by an optimisation engine but can do it by hand.\
+\
+Sims are binary class, (look at whether there are inter-relational class sums?) \
+Yeah, Dr Denman just said there were, ensembles and there are different methods.\
+You have 1vs1, and you have 1 v many.\
+1v1s, has better class balance, will often end up with a similar number of points either side of the line.\
+But will have lots of little svms, so computationally it will be a lot.\
+1vs1 will have better performance on rare classes but not practical computationally.\
+\
+Support vector classifier and support vector regressor are two different things inside SVM?\
+Best hyperparameters for SVM, \
+C is a regularisation parameter, bigger numbers is less regularisation.\
+Reality is that c can\'92t fit everything perfectly, so it tries to\'85.\
+Hard margin with svms inside of is inf.\
+If c is small it says put the line anywhere and it should be good, you can get overfitting and underfitting.\
+Kernel inside of SVm\
+RBF, this the default kernel,\
+Linear is apparently the default kernel.\
+\
+Don\'92t pick c based on testing and validation training sets, can\'92t tune these in isolation! Especially in SVMs!\
+Visualisation of sums across 1vs1, umap and tune. TSNE was \
+RBF represents things as a probability space. \
+Polynomial tests the degrees of the line in the order of the best fit for sims.\
+Polynomials are the least stable and the hardest to tune.\
+Linear are good with high dimensional data and sparse data.\
+\
+\
+Other parameters with the kernels\
+\
+Gamma: measure the influence of each point and manages the inverse size of the point.\
+\
+\
+Figuring out what the best model is for SVMs, do a grid search! Figure out what parameters I want to search over (i.e kernels)\
+Sklearn has an inbuilt grid search function, Simon recommends doing it manually and it gives you flexibility and control over what you are doing.\
+\
+\
+Adding class weights, hyper parameter = balanced, denotes more weight applied to the minority classes, trying to counteract the class imbalance by trying to enable the same amount of error amongst all classes instead of weight by classes frequency relative to the rest.\
+It\'92s scaling of the penalty, not normalisation.\
+\
+Three ways to normalise confusion matrix, row, column or both. Simon is showing without so that it shows the class scarcity. If normalised, that feature gets hard to interpret.\
+\
+Class weights, becomes less accurate on popular classes, but depends what you want to do on your model.\
+\
+Random forest, training lots and lots of little decision trees.\
+Hyperparams, number of trees and how big those trees get.\
+\
+\
+\
+\
+\
+}
